@@ -8,7 +8,7 @@
       <meta name="description" content="">
       <meta name="author" content="">
       <link rel="icon" href="../../favicon.ico">
-      <title>Sticky Footer Navbar Template for Bootstrap</title>
+      <title>PHP Foundation</title>
       <!-- Bootstrap core CSS -->
       <link href="asset/css/bootstrap.min.css" rel="stylesheet">
       <!-- Custom styles for this template -->
