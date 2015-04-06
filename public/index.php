@@ -28,7 +28,7 @@
       <!-- Begin page content -->
       <div class="container">
          <?php
-            $page = $_GET['page'];
+            $page = filter_input(INPUT_GET, "page");
             if (!isset($page)){
                $page = 'home';
             }
@@ -38,7 +38,7 @@
             }
 
             require_once ('../view/'.$page.'.php');
-         ?>   
+         ?>
       </div>
       <footer class="footer">
          <div class="container">
