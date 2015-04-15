@@ -2,7 +2,8 @@
             <h1>Contato</h1>
          </div>
           <div class="container">
-            <?php 
+            <?php
+
                if((isset($_POST)) and !(empty($_POST))){
                   echo '<div class="alert alert-success" role="alert">';
                   echo '<p>Dados enviados com sucesso.</p>';
@@ -14,8 +15,8 @@
                }
             ?>
          </div>
-         <div class="container">
-            <form action="index?page=contato" method="POST" class="form-horizontal" >
+         <div class="index.php">
+            <form action='contato' method="POST" class="form-horizontal" onsubmit="this.action = 'index.php''">
                <div class="form-group">
                   <label for="" >Nome</label>
                   <input type="text" class="form-control" name="nome">
