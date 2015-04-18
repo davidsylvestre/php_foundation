@@ -9,7 +9,6 @@ function getRota(array $Routes){
    if(substr($url, -1) <> '/'){
       $url .= '/';
    }
-
    foreach($Routes as $route){
       $urlRoute = ($route['url'] <> '/') ? $route['url'] : '';
 
@@ -19,9 +18,12 @@ function getRota(array $Routes){
 
       if (preg_match($parttern, $url, $matches)){
          array_shift($matches);
-         return call_user_func_array($route['callback'], $matches);
+         call_user_func_array($route['callback'], $matches);
+         return true;
       }
    }
+   // não encontrou nada
+   return false;
 }
 
 // fonte: http://php.net/manual/pt_BR/function.parse-url.php
@@ -59,4 +61,19 @@ function get_url(){
    $arr['url'] = $arr['scheme'].'://'.$arr['domain'].$uri;
 
    return $arr;
+}
+
+$getOrNotFound = function($pathPage, $page, $notFoundPage){
+   if(file_exists($pathPage.'/'.$page)){
+      require_once ($pathPage.'/'.$page);
+   }
+   else{
+      require_once ($pathPage.'/'.$notFoundPage);
+   }
+};
+
+function dd($var){
+   echo '<pre>';
+   var_dump($var);
+   echo '</pre>';
 }
