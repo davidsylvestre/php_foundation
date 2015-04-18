@@ -32,22 +32,10 @@
       <div class="container">
 
          <?php
-            var_dump($_REQUEST);
-            /*
-            $page = filter_input(INPUT_GET, "page");
-            if (!isset($page)){
-               $page = 'home';
-            }
-
-            if(!file_exists('../view/'.$page.'.php')){
-               $page = '404';
-            }
-
-            require_once ('../view/'.$page.'.php');
-            */
             if(!(getRota($rotas))){
                include('../view/404.php');
             }
+            
          ?>
       </div>
       <footer class="footer">

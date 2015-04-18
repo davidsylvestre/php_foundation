@@ -15,8 +15,8 @@
                }
             ?>
          </div>
-         <div class="index.php">
-            <form action='contato' method="POST" class="form-horizontal" onsubmit="this.action = 'index.php''">
+         <div class="">
+            <form action='contato' method="POST" class="form-horizontal">
                <div class="form-group">
                   <label for="" >Nome</label>
                   <input type="text" class="form-control" name="nome">
